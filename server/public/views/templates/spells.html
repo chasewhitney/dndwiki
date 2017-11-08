@@ -1,6 +1,63 @@
 <div ng-include="'views/partials/nav.html'"></div>
 <div class="container">
 
-    <h1 id="welcome" class="lead">Spells!</h1>
-  
+  <div layout="row" flex>
+    <div layout="column" flex>
+      <div layout="row" id="spellTableHead">
+        <h1>5e Spell Table</h1>
+      </div>
+      <div layout="row" flex>
+        <md-content>
+          <md-table-container>
+            <table md-table style="margin-left:auto;margin-right:auto;" class="spellTable" flex="80" layout-align="center">
+              <thead md-head class="tableHeader">
+                <tr md-row>
+                  <th md-column style="width:20%;">Name</th>
+                  <th md-column style="width:5%;">Level</th>
+                  <th md-column style="width:15%;">School</th>
+                  <th md-column style="width:5%;">Ritual</th>
+                  <th md-column style="width:10%;">Casting Time</th>
+                  <th md-column style="width:10%;">Components</th>
+                  <th md-column style="width:5%;">Concentration</th>
+                  <th md-column style="width:10%;">Source</th>
+                </tr>
+              </thead>
+              <tbody md-body>
+                <tr md-row class="spellRow" ng-repeat="spell in sc.allSpells">
+                  <td md-cell ng-class="">
+                    {{spell.name}}
+                  </td>
+                  <td md-cell ng-class="">
+                    {{spell.level}}
+                  </td>
+                  <td md-cell ng-class="">
+                    {{spell.school}}
+                  </td>
+                  <td md-cell ng-class="">
+                    {{spell.ritual}}
+                  </td>
+                  <td md-cell ng-class="">
+                    {{spell.casting_time}}
+                  </td>
+                  <td md-cell ng-class="">
+                    {{spell.components}}
+                  </td>
+                  <td md-cell ng-class="">
+                    {{spell.concentration}}
+                  </td>
+                  <td md-cell ng-class="">
+                    {{spell.page}}
+                  </td>
+
+                </tr>
+              </tbody>
+            </table>
+          </md-table-container>
+
+        </md-content>
+      </div>
+
+    </div> <!-- end of table column -->
+  </div> <!-- end of table row -->
+
 </div>

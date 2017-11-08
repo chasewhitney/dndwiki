@@ -78,3 +78,26 @@ li a:hover {
   text-decoration: underline;
   color: #eee;
 }
+
+.tableHeader th{
+  padding:10px;
+}
+
+.spellRow {
+  border-top: 1px solid grey;
+}
+
+.spellRow:hover{
+  background-color: #cccccc;
+  cursor: pointer;
+
+}
+
+.spellTable {
+  border-collapse: collapse;
+}
+
+#spellTableHead {
+  margin-left: auto;
+  margin-right: auto;
+}
