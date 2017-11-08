@@ -21,6 +21,14 @@ myApp.config(function($routeProvider, $locationProvider) {
           return UserService.getuser();
         }
       }
+    }).when('/spells', {
+      templateUrl: '/views/templates/spells.html',
+      controller: 'SpellsController as sc',
+      resolve: {
+        getuser : function(UserService){
+          return UserService.getuser();
+        }
+      }
     })
     .when('/info', {
       templateUrl: '/views/templates/info.html',
