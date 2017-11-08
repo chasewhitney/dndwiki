@@ -19,7 +19,8 @@ router.get('/getSpellsList', function(req, res) {
             console.log("Error inserting data: ", err);
             //next(err);
           } else {
-            console.log('Results:', result.rows);
+            // console.log('Results:', result.rows);
+            console.log('Success! Sending results');
             res.send(result.rows);
           }
         });
